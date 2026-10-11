@@ -49,7 +49,7 @@ function render() {
   const shown = Object.is(result, -0) ? '-0' : String(result);
   $('result').textContent = shown;
   $('result').style.fontSize = shown.length > 4 ? '35px' : '65px';
-  $('result-caption').textContent = result > curr && dec > 0 ? 'back around the cycle ↺' : `from ${curr}, move back ${dec}`;
+  $('result-caption').textContent = result > curr && dec > 0 ? 'back around the cycle ↺' : dec < 0 ? `from ${curr}, move forward ${Math.abs(dec)}` : `from ${curr}, move back ${dec}`;
   $('cycle-label').textContent = `${max} position${max === 1 ? '' : 's'}`;
   $('snippet').textContent = snippet(max, curr, dec, shown).replace('{{VERSION}}', document.querySelector('.version').textContent.slice(1));
   $('trail').textContent = trail.join(' ← ');
