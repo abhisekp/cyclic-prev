@@ -66,7 +66,7 @@ days[cyclicPrev(days.length, 4, 3)]; // 'Tue'
 Browser usage (the CDN becomes available after npm publication):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/cyclic-prev@1.0.0/dist/cyclic-prev.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cyclic-prev@1.0.1/dist/cyclic-prev.umd.js"></script>
 <script>
   const { cyclicPrev } = window.cyclicPrev;
   console.log(cyclicPrev(5, 0)); // 4
