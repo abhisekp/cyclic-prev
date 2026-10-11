@@ -21,7 +21,7 @@ On npm, open the cyclic-prev package settings and configure a GitHub Actions tru
 
 No npm token is needed in GitHub secrets. The release job has `id-token: write` and runs npm 11.19.1 on a GitHub-hosted Node 24 runner. Restrict the `npm` GitHub environment to the `master` branch. Run the Publish to npm workflow on master after first publication to create its matching GitHub release.
 
-Alternatively, an authenticated maintainer can configure the publisher with `npm trust github cyclic-prev --file=publish.yml --repo=abhisekp/cyclic-prev --env=npm --allow-publish --yes`. npm may require a browser verification challenge.
+Alternatively, an authenticated maintainer with npm 11.15.0+ can configure the publisher with `npm trust github cyclic-prev --file=publish.yml --repo=abhisekp/cyclic-prev --env=npm --allow-publish --yes`. Check `npm --version` first; the npm version bundled with Node 22 may need an upgrade. npm may require a browser verification challenge.
 
 ## Later releases
 
