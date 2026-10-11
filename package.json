@@ -1,0 +1,32 @@
+{
+  "name": "cyclic-prev",
+  "version": "1.0.0",
+  "description": "A tiny, dependency-free function for cycling backward through indexes.",
+  "main": "dist/index.js",
+  "module": "dist/cyclic-prev.esm.js",
+  "browser": "dist/cyclic-prev.umd.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "lib", "index.js"],
+  "keywords": ["cyclic", "prev", "previous", "number", "index", "integer", "carousel", "round-robin"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/abhisekp/cyclic-prev.git" },
+  "bugs": { "url": "https://github.com/abhisekp/cyclic-prev/issues" },
+  "homepage": "https://abhisekp.github.io/cyclic-prev/",
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=4" },
+  "author": { "name": "Abhisek Pattnaik", "email": "abhisekp@engineer.com", "url": "https://github.com/abhisekp" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:site": "npm run build && node scripts/build-site.mjs",
+    "dev": "npm run build:site && node scripts/serve.mjs",
+    "lint": "eslint .",
+    "test": "node tests/cyclicPrev.test.cjs && node --test tests/release.test.cjs",
+    "test:compat": "node tests/cyclicPrev.test.cjs",
+    "test:types": "tsc -p tests/types/tsconfig.json",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=dist/cyclic-prev.cjs.js --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 tests/cyclicPrev.test.cjs",
+    "test:package": "node scripts/test-package.mjs",
+    "validate": "npm run lint && npm run build && npm test && npm run test:coverage && npm run test:types && npm run test:package && npm run build:site",
+    "prepack": "npm run build"
+  },
+  "devDependencies": { "eslint": "10.12.0", "rollup": "4.64.5", "typescript": "7.0.2" }
+}

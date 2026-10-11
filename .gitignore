@@ -1,0 +1,13 @@
+node_modules/
+dist/
+lib/
+_site/
+coverage/
+.reference/
+.npm-cache/
+.npmrc
+output/
+.playwright-cli/
+.pages-branch/
+*.tgz
+*.log
