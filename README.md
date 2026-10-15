@@ -6,7 +6,7 @@
 
 Cycle backward through indexes. From `0`, wrap to the last position. The companion to [cyclic-next](https://github.com/abhisekp/cyclic-next), with zero runtime dependencies, CommonJS, ES modules, browser bundles, and TypeScript declarations.
 
-**[Try the playground](https://abhisekp.github.io/cyclic-prev/)** — the same look and feel as cyclic-next, using the actual package bundle. All playground assets work offline after download.
+**[Try the playground](https://cyclic-prev.js.org/)** — the same look and feel as cyclic-next, using the actual package bundle. All playground assets work offline after download.
 
 ## Install
 
