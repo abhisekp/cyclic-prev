@@ -48,6 +48,26 @@ Returns an integer in `[0, max)`. Throws `RangeError` for an invalid `max` and `
 
 Unlike cyclic-next v1's JavaScript remainder behavior, cyclic-prev normalizes the result so stepping backward from zero produces a valid index.
 
+## Companion: cyclic-next
+
+Use [cyclic-next](https://github.com/abhisekp/cyclic-next) for next-slide controls, stepping forward through weekdays, and advancing game turns. Both packages have zero runtime dependencies, CommonJS and ES module bundles, and TypeScript declarations.
+
+```sh
+npm install cyclic-next cyclic-prev
+```
+
+```js
+const cyclicNext = require('cyclic-next');
+const cyclicPrev = require('cyclic-prev');
+
+cyclicNext(5, 4); // 0: after the last position, return to the first
+cyclicPrev(5, 0); // 4: before the first position, return to the last
+```
+
+For array navigation, use a positive safe integer cycle size and non-negative safe integer indexes and steps. The edge-case contracts differ: cyclic-next v1 preserves JavaScript remainder behavior without input validation; cyclic-prev validates safe integers and normalizes the result into `[0, max)`. For example, `cyclicNext(5, 0, -1)` returns `-1`, while `cyclicPrev(5, 0)` returns `4`.
+
+[cyclic-next documentation](https://github.com/abhisekp/cyclic-next#readme) · [npm package](https://www.npmjs.com/package/cyclic-next) · [Interactive playground](https://cyclic-next.js.org/)
+
 ## Recipes
 
 ```js
