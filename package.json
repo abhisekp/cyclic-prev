@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/abhisekp/cyclic-prev/issues"
   },
-  "homepage": "https://abhisekp.github.io/cyclic-prev/",
+  "homepage": "https://cyclic-prev.js.org/",
   "publishConfig": {
     "access": "public"
   },
